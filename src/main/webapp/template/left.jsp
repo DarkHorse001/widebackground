@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <aside class="lt_aside_nav content mCustomScrollbar">
 	<h2>
 		<a href="#">起始页</a>
@@ -8,13 +10,10 @@
 				<dt>常用布局示例</dt>
 				<!--当前链接则添加class:active-->
 				<dd>
-					<a href="#" class="active">商品列表示例</a>
+					<a href="${pageContext.request.contextPath}/good/goodlist.do" class="active">商品列表示例</a>
 				</dd>
 				<dd>
-					<a href="#">商品详情示例</a>
-				</dd>
-				<dd>
-					<a href="#">商品回收站示例</a>
+					<a href="${pageContext.request.contextPath}/good/good.do">商品详情示例</a>
 				</dd>
 			</dl>
 		</li>

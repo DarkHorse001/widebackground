@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <header>
 	<h1>
 		<img src="images/admin_logo.png" />

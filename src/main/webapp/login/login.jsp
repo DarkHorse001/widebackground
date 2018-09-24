@@ -1,12 +1,65 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="utf-8" />
+<title>后台登录</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
+<style>
+body {
+	height: 100%;
+	background: #16a085;
+	overflow: hidden;
+}
+
+canvas {
+	z-index: -1;
+	position: absolute;
+}
+</style>
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/verificationNumbers.js"></script>
+<script src="${pageContext.request.contextPath}/js/Particleground.js"></script>
+<script>
+	$(document).ready(function() {
+		//粒子背景特效
+		$('body').particleground({
+			dotColor : '#5cbdaa',
+			lineColor : '#5cbdaa'
+		});
+		//验证码
+		createCode();
+	});
+</script>
 </head>
 <body>
-
+	<form action="login.do" method="post">
+		<dl class="admin_login">
+			<dt>
+				<strong>广淘网后台管理系统</strong> <em>Management System</em>
+			</dt>
+			<dd class="user_icon">
+				<input name="id" type="text" placeholder="账号"
+					class="login_txtbx" />
+			</dd>
+			<dd class="pwd_icon">
+				<input name="pwd" type="password" placeholder="密码"
+					class="login_txtbx" />
+			</dd>
+			<dd class="val_icon">
+				<div class="checkcode">
+					<input type="text" id="J_codetext" placeholder="验证码" maxlength="4"
+						class="login_txtbx">
+					<canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+				</div>
+				<input type="button" value="验证码核验" class="ver_btn"
+					onClick="validate();">
+			</dd>
+			<dd>
+				<input type="submit" value="立即登陆" class="submit_btn" />
+			</dd>
+		</dl>
+	</form>
 </body>
 </html>
