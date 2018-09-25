@@ -22,7 +22,7 @@
 		
 	<!-- 组件扫描 -->
 	<context:component-scan 
-		base-package="cn.tedu.spring.service" />
+		base-package="com.gt.wide.background.service" />
 
 </beans>
 
