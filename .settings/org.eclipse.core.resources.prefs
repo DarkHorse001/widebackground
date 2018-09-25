@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/gt/wide/background/service/IOrderService.java=GBK
 encoding//src/main/webapp/error.jsp=UTF-8
 encoding//src/main/webapp/good/good.jsp=UTF-8
 encoding//src/main/webapp/good/goodlist.jsp=UTF-8
@@ -7,3 +8,4 @@ encoding//src/main/webapp/login/login.jsp=UTF-8
 encoding//src/main/webapp/template/head.jsp=UTF-8
 encoding//src/main/webapp/template/header.jsp=UTF-8
 encoding//src/main/webapp/template/left.jsp=UTF-8
+encoding/<project>=UTF-8

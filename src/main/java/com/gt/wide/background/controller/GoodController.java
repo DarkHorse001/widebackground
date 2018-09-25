@@ -8,6 +8,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Controller;
+
 import com.gt.wide.background.base.annotation.RequestMapping;
 import com.gt.wide.background.entity.Brand;
 import com.gt.wide.background.entity.Directory;
@@ -28,6 +30,8 @@ import com.gt.wide.background.service.IGoodService;
 import com.gt.wide.background.service.IKindService;
 import com.gt.wide.background.service.KindServiceImpl;
 
+@Controller
+@RequestMapping("/kind")
 public class GoodController {
 	
 	private IGoodService goodService = new GoodServiceImpl();
