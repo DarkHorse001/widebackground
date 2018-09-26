@@ -2,8 +2,13 @@ package com.gt.wide.background.service;
 
 import java.util.List;
 
-import com.gt.wide.background.entity.Kind;
+import com.gt.wide.background.bean.Kind;
 
+/**
+ * 处理与种类有关的服务
+ * @author qin
+ *
+ */
 public interface IKindService {
 	/**
 	 * 根据目录id获取种类

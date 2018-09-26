@@ -3,13 +3,16 @@ package com.gt.wide.background.service;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.gt.wide.background.dao.GoodListDaoImpl;
-import com.gt.wide.background.dao.IGoodListDao;
-import com.gt.wide.background.entity.GoodList;
+import org.springframework.stereotype.Service;
 
+import com.gt.wide.background.bean.GoodList;
+import com.gt.wide.background.mapper.GoodListDaoImpl;
+import com.gt.wide.background.mapper.GoodListMapper;
+
+@Service("goodListService")
 public class GoodListServiceImpl implements IGoodListService {
 	
-	private IGoodListDao goodListDao = new GoodListDaoImpl();
+	private GoodListMapper goodListDao = new GoodListDaoImpl();
 	
 	@Override
 	public GoodList findGoodListById(Integer id) throws SQLException {

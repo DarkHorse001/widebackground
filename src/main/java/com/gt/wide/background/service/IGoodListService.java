@@ -3,8 +3,13 @@ package com.gt.wide.background.service;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.gt.wide.background.entity.GoodList;
+import com.gt.wide.background.bean.GoodList;
 
+/**
+ * 处理与商品列表的服务
+ * @author qin
+ *
+ */
 public interface IGoodListService {
 	/**
 	 * 根据商品的id查找商品

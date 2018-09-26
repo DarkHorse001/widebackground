@@ -1,7 +1,12 @@
 package com.gt.wide.background.service;
 
-import com.gt.wide.background.entity.User;
+import com.gt.wide.background.bean.User;
 
+/**
+ * 处理与用户有关的服务
+ * @author qin
+ *
+ */
 public interface IUserService {
 	/**
 	 * 检查用户登录

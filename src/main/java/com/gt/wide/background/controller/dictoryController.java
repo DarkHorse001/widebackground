@@ -7,10 +7,13 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Controller;
+
 import com.gt.wide.background.base.annotation.RequestMapping;
-import com.gt.wide.background.dao.dictoryDao;
-import com.gt.wide.background.entity.dictory;
+import com.gt.wide.background.bean.dictory;
+import com.gt.wide.background.mapper.dictoryDao;
 import com.gt.wide.background.service.dictoryService;
+
 
 public class dictoryController {
 	private dictoryService service = new dictoryService(); 

@@ -2,13 +2,16 @@ package com.gt.wide.background.service;
 
 import java.util.List;
 
-import com.gt.wide.background.dao.BrandDaoImpl;
-import com.gt.wide.background.dao.IBrandDao;
-import com.gt.wide.background.entity.Brand;
+import org.springframework.stereotype.Service;
 
+import com.gt.wide.background.bean.Brand;
+import com.gt.wide.background.mapper.BrandDaoImpl;
+import com.gt.wide.background.mapper.BrandMapper;
+
+@Service("brandService")
 public class BrandServiceImpl implements IBrandService {
 	
-	private IBrandDao brandDao = new BrandDaoImpl();
+	private BrandMapper brandDao = new BrandDaoImpl();
 	
 	@Override
 	public List<Brand> findDirectoryByPid(Integer DirectoryId) {

@@ -2,7 +2,7 @@ package com.gt.wide.background.service;
 
 import java.util.List;
 
-import com.gt.wide.background.entity.Directory;
+import com.gt.wide.background.bean.Directory;
 
 /**
  * 操作目录业务

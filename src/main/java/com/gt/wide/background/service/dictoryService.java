@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gt.wide.background.dao.dictoryDao;
-import com.gt.wide.background.entity.dictory;
+import com.gt.wide.background.bean.dictory;
+import com.gt.wide.background.mapper.dictoryDao;
 
 public class dictoryService {
 	private dictoryDao dao  =  new dictoryDao(); ;

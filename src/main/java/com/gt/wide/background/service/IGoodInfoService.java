@@ -1,7 +1,12 @@
 package com.gt.wide.background.service;
 
-import com.gt.wide.background.entity.GoodInfo;
+import com.gt.wide.background.bean.GoodInfo;
 
+/**
+ * 处理与商品详细信息的服务
+ * @author qin
+ *
+ */
 public interface IGoodInfoService {
 	/**
 	 * 添加商品详细信息

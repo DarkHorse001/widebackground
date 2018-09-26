@@ -1,11 +1,14 @@
 package com.gt.wide.background.service;
 
-import com.gt.wide.background.dao.GoodInfoDaoImpl;
-import com.gt.wide.background.dao.IGoodInfoDao;
-import com.gt.wide.background.entity.GoodInfo;
+import org.springframework.stereotype.Service;
 
+import com.gt.wide.background.bean.GoodInfo;
+import com.gt.wide.background.mapper.GoodInfoDaoImpl;
+import com.gt.wide.background.mapper.GoodInfoMapper;
+
+@Service("goodInfoService")
 public class GoodInfoServiceImpl implements IGoodInfoService {
-	private IGoodInfoDao goodInfoDao = new GoodInfoDaoImpl();
+	private GoodInfoMapper goodInfoDao = new GoodInfoDaoImpl();
 
 	@Override
 	public GoodInfo addGoodInfo(GoodInfo info) {

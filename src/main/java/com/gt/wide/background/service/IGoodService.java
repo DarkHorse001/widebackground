@@ -2,9 +2,14 @@ package com.gt.wide.background.service;
 
 import java.sql.SQLException;
 
-import com.gt.wide.background.entity.Good;
+import com.gt.wide.background.bean.Good;
 import com.gt.wide.background.service.ex.GoodNotFoundException;
 
+/**
+ * 处理商品的服务
+ * @author qin
+ *
+ */
 public interface IGoodService {
 	/**
 	 * 添加商品

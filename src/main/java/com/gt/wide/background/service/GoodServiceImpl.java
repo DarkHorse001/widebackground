@@ -2,13 +2,16 @@ package com.gt.wide.background.service;
 
 import java.sql.SQLException;
 
-import com.gt.wide.background.dao.GoodDaoImpl;
-import com.gt.wide.background.dao.IGoodDao;
-import com.gt.wide.background.entity.Good;
+import org.springframework.stereotype.Service;
+
+import com.gt.wide.background.bean.Good;
+import com.gt.wide.background.mapper.GoodDaoImpl;
+import com.gt.wide.background.mapper.GoodMapper;
 import com.gt.wide.background.service.ex.GoodNotFoundException;
 
+@Service("goodService")
 public class GoodServiceImpl implements IGoodService {
-	private IGoodDao goodDao = new GoodDaoImpl();
+	private GoodMapper goodDao = new GoodDaoImpl();
 
 	@Override
 	public Good addGood(Good good) {

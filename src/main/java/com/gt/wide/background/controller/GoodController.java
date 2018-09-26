@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 
 import com.gt.wide.background.base.annotation.RequestMapping;
-import com.gt.wide.background.entity.Brand;
-import com.gt.wide.background.entity.Directory;
-import com.gt.wide.background.entity.Good;
-import com.gt.wide.background.entity.GoodInfo;
-import com.gt.wide.background.entity.GoodList;
-import com.gt.wide.background.entity.Kind;
+import com.gt.wide.background.bean.Brand;
+import com.gt.wide.background.bean.Directory;
+import com.gt.wide.background.bean.Good;
+import com.gt.wide.background.bean.GoodInfo;
+import com.gt.wide.background.bean.GoodList;
+import com.gt.wide.background.bean.Kind;
 import com.gt.wide.background.service.BrandServiceImpl;
 import com.gt.wide.background.service.DirectoryServiceImpl;
 import com.gt.wide.background.service.GoodInfoServiceImpl;
@@ -30,6 +30,11 @@ import com.gt.wide.background.service.IGoodService;
 import com.gt.wide.background.service.IKindService;
 import com.gt.wide.background.service.KindServiceImpl;
 
+/**
+ * 处理与商品有关的请求
+ * @author qin
+ *
+ */
 @Controller
 @RequestMapping("/kind")
 public class GoodController {

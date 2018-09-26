@@ -2,12 +2,15 @@ package com.gt.wide.background.service;
 
 import java.util.List;
 
-import com.gt.wide.background.dao.IKindDao;
-import com.gt.wide.background.dao.KindDaoImpl;
-import com.gt.wide.background.entity.Kind;
+import org.springframework.stereotype.Service;
 
+import com.gt.wide.background.bean.Kind;
+import com.gt.wide.background.mapper.KindMapper;
+import com.gt.wide.background.mapper.KindDaoImpl;
+
+@Service("kindService")
 public class KindServiceImpl implements IKindService {
-	private IKindDao kindDao = new KindDaoImpl();
+	private KindMapper kindDao = new KindDaoImpl();
 	@Override
 	public List<Kind> findDirectoryByPid(Integer DirectoryId) {
 		if(DirectoryId == null){

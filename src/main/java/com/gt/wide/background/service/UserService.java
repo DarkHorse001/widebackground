@@ -1,8 +1,11 @@
 package com.gt.wide.background.service;
 
-import com.gt.wide.background.dao.UserDaoImpl;
-import com.gt.wide.background.entity.User;
+import org.springframework.stereotype.Service;
 
+import com.gt.wide.background.bean.User;
+import com.gt.wide.background.mapper.UserDaoImpl;
+
+@Service("userService")
 public class UserService {
 	/**
 	 * 验证用户登录信息

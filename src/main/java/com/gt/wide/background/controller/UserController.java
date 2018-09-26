@@ -10,9 +10,14 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.gt.wide.background.entity.User;
+import com.gt.wide.background.bean.User;
 import com.gt.wide.background.service.UserService;
 
+/**
+ * 处理与用户有关的请求
+ * @author qin
+ *
+ */
 @Controller
 @RequestMapping("/user")
 public class UserController {
