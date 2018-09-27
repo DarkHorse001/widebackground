@@ -20,22 +20,36 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 		
+	<!-- 事务的注解驱动 -->
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+	
+	<!-- 配置事务管理器DataSourceTransactionManager -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+		
+	<!-- MapperScannerConfigurer -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.gt.wide.background.mapper"></property>	
+		<!-- 使用MyBatis时定义的接口文件在哪个包中 -->
+		<property name="basePackage" 
+			value="com.gt.wide.background.mapper" />
 	</bean>
 	
 	<!-- SqlSessionFactoryBean -->
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
-		<!-- 配置XML映射文件的位置 -->	
-		<property name="mapperLocations" value="classpath:mappers/UserMapper.xml"/>
+		<!-- 配置XML映射文件的位置 -->
+		<property name="mapperLocations" 
+			value="classpath:mappers/*.xml" />
 		<!-- 配置数据源 -->
-		<property name="dataSource" ref="dataSource"/>
+		<property name="dataSource"
+			ref="dataSource" />
 	</bean>
-
 
 	<!-- 读取db.properties -->
 	<util:properties id="dbConfig"
-		location="classpath:jdbc.properties" />
+		location="classpath:db.properties" />
 		
 	<!-- 配置数据源 -->
 	<bean id="dataSource"

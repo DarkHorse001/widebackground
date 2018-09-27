@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans>
-	<bean class="com.gt.wide.background.controller.UserController"></bean>
-	<bean class="com.gt.wide.background.controller.MainController"></bean>
-	<bean class="com.gt.wide.background.controller.GoodController"></bean>
-	<bean class="com.gt.wide.background.controller.dictoryController"></bean>
-	<!-- <bean class="com.gt.wide.background.controller.dictoryController"></bean> -->
-</beans>

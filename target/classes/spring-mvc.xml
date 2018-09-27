@@ -25,28 +25,11 @@
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 视图名与具体的视图组件的对应关系 -->
-		<property name="prefix" value="" />
+		<property name="prefix" value="/WEB-INF/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
 	<mvc:annotation-driven />
-	<!-- 配置拦截器链 -->
-	<!-- <mvc:interceptors>
-		配置第1个拦截器
-		<mvc:interceptor>
-			以下配置中，必须按顺序配置：mapping > exclude-mapping > bean
-			1. mapping：拦截路径，可以有多个mapping节点
-			不在拦截路径中的请求，完全不受理
-			<mvc:mapping path="/user/**" />
-			2. exclude-mapping：白名单
-			<mvc:exclude-mapping path="/user/reg.do" />
-			<mvc:exclude-mapping path="/user/handle_reg.do" />
-			<mvc:exclude-mapping path="/user/login.do" />
-			<mvc:exclude-mapping path="/user/handle_login.do" />
-			3. bean：配置拦截器类，只需配置class即可
-			<bean class="cn.tedu.spring.interceptor.LoginInterceptor" />
-		</mvc:interceptor>
-	</mvc:interceptors> -->
 	
 </beans>
 
